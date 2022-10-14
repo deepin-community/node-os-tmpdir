@@ -1,0 +1,26 @@
+Source: node-os-tmpdir
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Ross Gammon <rosco2@ubuntu.com>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-tape <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-os-tmpdir
+Vcs-Git: https://salsa.debian.org/js-team/node-os-tmpdir.git
+Homepage: https://github.com/sindresorhus/os-tmpdir
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-os-tmpdir
+Architecture: all
+Depends: ${misc:Depends}
+ , nodejs
+Description: Node.js os.tmpdir() ponyfill
+ Ponyfill: A polyfill that doesn't overwrite the native method.
+ .
+ Use this instead of require('os').tmpdir() to get a consistent behaviour
+ on different Node.js versions (even 0.8).
+ .
+ Node.js is an event-based server-side JavaScript engine.

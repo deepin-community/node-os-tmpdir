@@ -1,0 +1,22 @@
+Description: replace ava by tape
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2021-11-02
+
+--- a/test.js
++++ b/test.js
+@@ -1,5 +1,5 @@
+-import test from 'ava';
+-import m from './';
++const test = require('tape');
++const m = require('./');
+ 
+ const os = {tmpdir: m};
+ 
+@@ -38,5 +38,6 @@
+ 		t.is(os.tmpdir(), '/tmpdir\\');
+ 		process.env.TMPDIR = '/';
+ 		t.is(os.tmpdir(), '/');
++        t.end();
+ 	}
+ });

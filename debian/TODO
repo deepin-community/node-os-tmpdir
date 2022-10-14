@@ -1,0 +1,22 @@
+At the moment, the upstream tests included in the package cannot be run due
+to a missing dependency. Node-ava is the required dependency and none of its
+dependencies are available either:
+
+Dependencies:
+NPM                                               Debian
+ava (0.0.4)                                       None
+├─ chalk (^0.5.1)                                 None
+│  ├─ ansi-styles (^2.1.0)                        None
+│  ├─ escape-string-regexp (^1.0.2)               None
+│  ├─ has-ansi (^2.0.0)                           None
+│  │  └─ ansi-regex (^2.0.0)                      None
+│  ├─ strip-ansi (^3.0.0)                         None
+│  │  └─ ansi-regex (^2.0.0)                      None
+│  └─ supports-color (^2.0.0)                     None
+│     └─ has-flag (^1.0.0)                        None
+├─ each-async (^1.0.0)                            None
+│  ├─ onetime (^1.0.0)                            None
+│  └─ set-immediate-shim (^1.0.0)                 None
+├─ log-symbols (^1.0.0)                           None
+│  └─ chalk (^1.0.0)                              None
+└─ minimist (^1.1.0)                              None

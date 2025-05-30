@@ -16,7 +16,7 @@ Rules-Requires-Root: no
 Package: node-os-tmpdir
 Architecture: all
 Depends: ${misc:Depends}
- , nodejs
+ , nodejs:any
 Description: Node.js os.tmpdir() ponyfill
  Ponyfill: A polyfill that doesn't overwrite the native method.
  .
